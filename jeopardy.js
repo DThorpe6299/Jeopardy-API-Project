@@ -95,6 +95,8 @@ const $table = $('#jeopardy');
 async function fillTable () {
   const tHead = document.getElementsByTagName('thead')[0]
   const tBody = document.getElementsByTagName('tbody')[0]
+  tHead.innerHTML = "";
+  tBody.innerHTML = "";
   randomIds = await getCategoryIds()
   console.log({ randomIds })
   categoryQuestions = []
